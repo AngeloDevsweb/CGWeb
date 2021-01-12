@@ -1,0 +1,282 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    
+}
+
+.contenedor{
+    width: 100%;
+    /* max-width: 1600px; */
+    /* margin: 0px auto; */
+    display: grid;
+    /* grid-gap: 20px; */
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(7, auto);
+
+    grid-template-areas: "navegacion navegacion"
+                         "portada portada"
+                         "imagen1 texto1"
+                         "texto2 imagen2"
+                         "imagen3 texto3"
+                         "planes planes"
+                         "formulario information"
+                         "post post"
+                         "pie pie";
+}
+
+.navegacion{
+    background-color: #000000;
+    
+    grid-area: navegacion;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contenedor .navegacion .brand{
+    font-size: 35px;
+    line-height: 80px;
+    
+    font-weight: bold;
+}
+
+.navegacion .enlaces{
+    display: flex;
+    align-items: center;
+    
+}
+
+.navegacion .enlaces a{
+    margin-left: 20px;
+    padding: 30px;
+    transition: all 0.25s;
+}
+
+.navegacion .enlaces a:hover{
+    background-color: rgba(255, 0, 0, 0.3);
+}
+
+.navegacion a{
+    color: white;
+}
+
+.portada{
+    grid-area: portada;
+}
+
+.portada img{
+    width: 100%;
+    height: 650px;
+}
+
+
+.contenedor  .imagen1{
+    grid-area: imagen1;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contenedor  .texto1{
+    grid-area: texto1;
+    margin-top: 20px;
+
+}
+.contenedor .texto1 h3,
+.contenedor .texto2 h3,
+.contenedor .texto3 h3
+{
+    font-size: 36px;
+    text-align: center;
+}
+
+.contenedor .texto1 p,
+.contenedor .texto2 p,
+.contenedor .texto3 p
+{
+    margin-top: 50px;
+    letter-spacing: 3px;
+    padding: 35px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contenedor  .texto2{
+    grid-area: texto2;
+    
+}
+
+.contenedor .texto2 h3,
+.contenedor .texto3 h3{
+    margin-top: 30px;
+}
+.contenedor  .imagen2{
+    grid-area: imagen2;
+}
+.contenedor  .texto3{
+    grid-area: texto3;
+    margin-bottom: 30px;
+    
+}
+.contenedor  .imagen3{
+    margin-bottom: 30px;
+    grid-area: imagen3;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor  .imagen2 img{
+    height: 500px;
+}
+ div img{
+    height: 350px;
+    width: 600px;
+    border-radius: 5px;
+}
+
+.planes{
+    background-color: #ffffff;
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    grid-area: planes;
+
+    margin-bottom: 20px;
+}
+
+.planes .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.planes .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.planes .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.planes .card h4{
+    font-weight: 600;
+    font-size: 26px;
+}
+.planes .card ul li,
+.planes .card p{
+    font-family: 'Poppins', sans-serif;
+}
+
+.formulario{
+    background-color:  #000000;
+    width: 100%;
+    padding: 20px;
+    grid-area: formulario;
+    margin:auto;
+}
+
+.formulario h3,
+.formulario p label{
+    color: white;
+}
+
+.formulario p input,
+.formulario p button,
+.formulario p textarea{
+    border: none;
+    padding: .7em;
+    width: 90%;
+    background: none;
+    outline: none;
+    border-bottom: 1px solid #d63031;
+    color: #fff;
+}
+
+.formulario p button{
+    background: #b70e21;
+    border: 0;
+    
+    text-transform: uppercase;
+    padding: 1em;
+}
+.formulario p button:hover,
+.formulario p button:focus{
+        background: #d63031;
+        color: #000;
+}
+.formulario p input{
+    margin-bottom: 20px;
+}
+.formulario h3{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.formulario p label{
+    
+}
+
+.information{
+    background-color: #202120;
+    
+    
+    grid-area: information;
+    color: white;
+    padding: 20px;
+}
+
+.information h3{
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.information p{
+    margin-bottom: 5px;
+}
+
+.information ul a{
+    color: white;
+}
+
+.information ul a .icono{
+    color: blue;
+    margin-right: 3px;
+}
+
+.post{
+    background-color: #f0f0f0;
+    width: 100%;
+    grid-area: post;
+    height: 250px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+.post p{
+    letter-spacing: 2px;
+    font-size: 18px;
+}
+
+.pie{
+    grid-area: pie;
+    text-align: center;
+    background-color: #3e3636;
+    color: #fff;
+}
+.pie footer{
+    padding: 20px;
+}
